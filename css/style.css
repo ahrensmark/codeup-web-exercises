@@ -1,4 +1,78 @@
+/* center header */
 .fancy-header {
-    color: purple; /* single line comment */
+    color: navy; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+/* change all headers color to blue & underline */
+h1,h2 {
+    color: deepskyblue;
+    text-decoration: underline;
+}
+
+/* change main background image */
+main {
+    background-image: url(../img/astronomy-1867616__340.jpg);
+    background-size: auto;
+}
+
+/* change page background color */
+body {
+    background-color: lightgrey;
+}
+
+/* restyle unordered list */
+ul {
+    list-style: square;
+    color: whitesmoke;
+}
+
+/* restyle ordered list */
+ol {
+    list-style: lower-alpha;
+    color: ghostwhite;
+}
+
+/* Change page font to Stencil Std */
+.newfont {
+    font-family: "Stencil Std";
+}
+
+/* change table color & font size */
+.fc {
+    font-size: small;
+    color: lightgray;
+    border: 2px solid lightgrey;
+}
+
+/* padding */
+table, table tr, table td {
+    padding: 10px;
+}
+
+/* anchor tag psuedo class */
+a:link {
+    color: black
+}
+a:visited {
+    color: green
+}
+a:hover {
+    color: yellow;
+}
+a:active {
+    color: dodgerblue;
+}
+
+/* more stuff */
+.pcolor {
+    color: rgb(235, 110, 31);
+}
+
+.headindent {
+    text-indent: 50px;
+}
+tr {
+    outline: thin solid;
 }
