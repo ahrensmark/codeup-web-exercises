@@ -1,0 +1,87 @@
+/* Button framework */
+/* primary button */
+.btnprimary /* link */{
+    background-color: #007bff; /* blue */
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 15px;
+}
+.btnprimary:visited {
+    background-color: #007bff; /* blue */
+}
+.btnprimary:hover {
+    background-color: #0068d6; /* darkerblue */
+}
+.btnprimary:active {
+    /* background-color: #0068d6; /* darkerblue */
+    background-color: #0068d6; /* darkerblue */
+}
+
+
+/* secondary button */
+.btnsecondary {
+    background-color: #6c757d; /* gray */
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 15px;
+
+}
+.btnsuccess {
+    background-color: #28a745; /* green */
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 15px;
+
+}
+.btndanger {
+    background-color: #dc3545; /* red */
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 15px;
+
+}
+.btnwarning {
+    background-color: #ffc107; /* darkyellow */
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 15px;
+
+}
+.btninfo {
+    background-color: #17a2b8; /* bluegreen */
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 15px;
+
+}
+
+.btnlight {
+    background-color: #f8f9fa; /* ghost */
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px 15px;
+
+}
+
+.btndark {
+    background-color: #343a40; /* dark */
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 15px;
+
+}
+.btnlink {
+     /* none */
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px 15px;
+}
+
+
