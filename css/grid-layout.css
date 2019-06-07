@@ -38,3 +38,23 @@
     width: calc(12.5% - 21px);
     background-color: #e8a7a0;
 }
+@media screen and (min-width: 1px) and (max-width: 991px) {
+    .container {
+        width: 100%
+    }
+    .row .one-half {
+        width: 100%
+    }
+    .row .one-third {
+        width: 100%
+    }
+    .row .one-fourth {
+        width: 100%
+    }
+    .row .one-sixth {
+        width: 100%
+    }
+    .row .one-eighth {
+           width: 100%
+       }
+}

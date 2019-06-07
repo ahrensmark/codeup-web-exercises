@@ -1,0 +1,133 @@
+ .alert-info {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+/*nav {*/
+    /*text-align: center;*/
+/*}*/
+
+ul {
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+img {
+    height:auto;
+    width: 100%;
+}
+
+.sub-section {
+    font-style: italic;
+}
+
+footer {
+    margin-top: 200px;
+}
+
+@media screen and (min-width:400px) and (max-width:1500px) {
+    h1 {
+        text-align: left;
+    }
+    .alert-info {
+        display: none;
+    }
+    li {
+        display: inline-block;
+        padding: 10px;
+    }
+    ul {
+       float: right;
+       margin-top:-60px;
+    }
+    .main {
+        float: left;
+        padding-right: 5px;
+        width: 65%;
+    }
+    .sub-section {
+        overflow: hidden;
+        padding-left: 5px;
+
+    }
+    body {
+        display:inline-block;
+        width: 100%;
+    }
+
+
+
+}
+
+
+
+    /*body {*/
+    /*    display:inline-block;*/
+/*    width: 90%;*/
+/*}*/
+
+/*ul {*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    margin-left: 192px;*/
+/*}*/
+
+/*li {*/
+/*    display:inline;*/
+/*    padding: 10px;*/
+
+/*}*/
+
+/*nav {*/
+/*    float: right;*/
+/*    margin-top: 40px;*/
+/*    width: 50%;*/
+/*}*/
+/*h1 {*/
+/*    float:left;*/
+/*    width: 50%;*/
+/*}*/
+/*.header-img{*/
+/*    align-content:center;*/
+/*}*/
+/*.main {*/
+/*    float:left;*/
+/*    width: 75%;*/
+/*}*/
+/*.subsection {*/
+/*    width: 25%;*/
+/*}*/
+
+/*footer {*/
+/*    padding-top: 400px;*/
+/*}*/
+/*!*mobile devices*!*/
+/*@media screen and (max-width:375px){*/
+/*    body {*/
+/*        display: inline;*/
+/*    }*/
+/*    nav {*/
+/*        width: 50px;*/
+/*        float: left;*/
+/*    }*/
+/*    h1 {*/
+/*        float: none;*/
+/*        text-align: center;*/
+/*        margin: 350px;*/
+/*    }*/
+/*    .header-img {*/
+/*        width: 339;*/
+/*        height: 249;*/
+/*    }*/
+/*}*/
+
+/*!*tablet*!*/
+/*!**/
+/*@media screen and (min-width:376px) and (max-width:1050px) {*/
+/*    selector property: value;*/
+
