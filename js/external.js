@@ -3,10 +3,10 @@
 //... rest of javascript code
 console.log('Hello from external JavaScript!');
 
-alert("Welcome to my website!");
+//alert("Welcome to my website!");
 
-var userInput = prompt('What is your favorite color?');
-console.log('Great, my favorite color is also ' + userInput);
+//var userInput = prompt('What is your favorite color?');
+//console.log('Great, my favorite color is also ' + userInput);
 
 //Complete exercise 3 from the previous lesson, but write your code in the external.js file instead of in the console.
 //
@@ -34,17 +34,44 @@ console.log(costToRent);
  console.log(payToReceive);
 
 //A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
-var classSizeFull = 24;
-var classSizeActual = 22;
-var classTime = "10:30";
-var classTimeBusy = "10:30";
+var classSizeFull = prompt('What is the maximum class size');
+alert("Maximum class size is: " + classSizeFull);
+console.log('Maximum class size is: ' + classSizeFull);
+
+var classSizeActual = prompt('How many students are currently enrolled in this class?');
+alert("Current class enrollment is: " + classSizeActual);
+console.log('Actual class size is:  ' + classSizeActual);
+
+var classTime = prompt('What time is this class HH:MM?');
+alert("Class time is: " + classTime);
+console.log('Class time is:  ' + classTime);
+
+var classTimeBusy = prompt('What time do you have available?');
+alert("Class time available: " + classTimeBusy);
+console.log('Class time available: ' + classTimeBusy);
+
 console.log(classSizeActual < classSizeFull) && (classTime !== classTimeBusy);
 
 //A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
 // Premium members do not need to buy a specific amount of products.
-var itemsPurchasedMin = 2;
-var itemsPurchasedAct = 3;
-var offerGoodDate = "6/14/19";
-var purchaseDate = "6/13/19";
-var premiumMember = "Yes";
+var itemsPurchasedMin = prompt('What is the minimum purchase quantity for non-Premium members?');
+alert("Minimum purchase quantity for non-Premium members is : " + itemsPurchasedMin);
+console.log('Maximum class size is: ' + itemsPurchasedMin);
+
+var itemsPurchasedAct = prompt('How many items did you purchase?');
+alert("How many items did you purchase? " + itemsPurchasedAct);
+console.log('How many items did you purchase? ' + itemsPurchasedAct);
+
+var offerGoodDate = prompt('Date offer ends MM/DD/YY?');
+alert("Offer ends date: " + offerGoodDate);
+console.log('Offer ends date: ' + offerGoodDate);
+
+var purchaseDate = prompt('Date purchases:');
+alert("Date purchased: " + purchaseDate);
+console.log('Date purchased: ' + purchaseDate);
+
+var premiumMember = prompt('Are you a Premium member Yes or No?');
+alert("Premium member? " + premiumMember);
+console.log('Premium memeber: ' + premiumMember);
+
 console.log((itemsPurchasedMin < itemsPurchasedAct && offerGoodDate >= purchaseDate) || (premiumMember = "yes" && offerGoodDate >= purchaseDate));
