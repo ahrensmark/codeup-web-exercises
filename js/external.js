@@ -15,23 +15,58 @@ console.log('Hello from external JavaScript!');
 
 // You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it),
 // and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is $3, how much will you have to pay?
- var littlemer = 3;
- var brotherbear = 5;
- var hercules = 1;
- var costToRent = (littlemer+brotherbear+hercules)*3;
-console.log(costToRent);
+
+var littleMer = prompt('How many days are you renting The Little Mermaid?');
+alert("You rented The Little Mermaid for " + littleMer +" days.");
+console.log('You rented The Little Mermaid for ' + littleMer +' days');
+
+var brotherBear = prompt('How many days are you renting Brother Bear?');
+alert("You rented Brother Bear for " + brotherBear +" days.");
+console.log('You rented Brother Bear for ' + brotherBear +' days');
+
+var hercules = prompt('How many days are you renting Hercules?');
+alert("You rented Hercules for " + hercules +" days.");
+console.log('You rented The Hercules for ' + hercules +' days');
+
+var rentRate = prompt('What is the daily rental fee per movie?');
+alert("Daily rental fee per movie is: " + rentRate +" days.");
+console.log('Daily rental fee per movie is: ' + rentRate +' days');
+
+var costToRent = (littleMer * rentRate) + (brotherBear * rentRate) + (hercules * rentRate);
+alert("Your total rental cost is: " + costToRent);
+console.log('Your total rental cost is: ' + costToRent);
+
 
 //Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour.
 //Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week?
 //You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
- var googlePay = 400;
- var amazonPay = 380;
- var facebookPay = 350;
- var googleHrs = 6;
- var amazonHrs = 4;
- var facebookHrs = 10;
- var payToReceive = (googlePay*googleHrs)+(amazonPay*amazonHrs)+(facebookPay*facebookHrs);
- console.log(payToReceive);
+var googlePay = prompt('How much does Google pay per hour?');
+alert("Google pays " + googlePay +" per hour.");
+console.log('Google pays ' + googlePay +' per hour');
+
+var amazonPay = prompt('How much does Amazon pay per hour?');
+alert("Amazon pays " + amazonPay +" per hour.");
+console.log('Amazon pays ' + amazonPay +' per hour');
+
+var facebookPay = prompt('How much does Facebook pay per hour?');
+alert("Facebook pays " + facebookPay +" per hour.");
+console.log('Facebook pays ' + facebookPay +' per hour');
+
+var googleHrs = prompt('How many hours did you work for Google?');
+alert("Google hours worked are " + googleHrs);
+console.log('Google hours worked are ' + googleHrs);
+
+var amazonHrs = prompt('How many hours did you work for Amazon?');
+alert("Amazon hours worked are " + amazonHrs);
+console.log('Amazon hours worked are ' + amazonHrs);
+
+var facebookHrs = prompt('How many hours did you work for Facebook?');
+alert("Facebook hours worked are " + facebookHrs);
+console.log('Facebook hours worked are ' + facebookHrs);
+
+var payToReceive = (googlePay*googleHrs)+(amazonPay*amazonHrs)+(facebookPay*facebookHrs);
+alert("Your total payment is: " + payToReceive);
+console.log(payToReceive);
 
 //A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
 var classSizeFull = prompt('What is the maximum class size');
@@ -46,11 +81,14 @@ var classTime = prompt('What time is this class HH:MM?');
 alert("Class time is: " + classTime);
 console.log('Class time is:  ' + classTime);
 
-var classTimeBusy = prompt('What time do you have available?');
-alert("Class time available: " + classTimeBusy);
-console.log('Class time available: ' + classTimeBusy);
+var classTimeFree = prompt('What time do you have available?');
+alert("Class time available: " + classTimeFree);
+console.log('Class time available: ' + classTimeFree);
 
-console.log(classSizeActual < classSizeFull) && (classTime !== classTimeBusy);
+var enrollStatus = (classSizeActual < classSizeFull) && (classTime == classTimeFree);
+alert("I can enroll? " + enrollStatus);
+
+console.log(classSizeActual < classSizeFull) && (classTime !== classTimeFree);
 
 //A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
 // Premium members do not need to buy a specific amount of products.
@@ -72,6 +110,9 @@ console.log('Date purchased: ' + purchaseDate);
 
 var premiumMember = prompt('Are you a Premium member Yes or No?');
 alert("Premium member? " + premiumMember);
-console.log('Premium memeber: ' + premiumMember);
+console.log('Premium member: ' + premiumMember);
+
+var canPurchase = ((itemsPurchasedMin < itemsPurchasedAct && offerGoodDate >= purchaseDate) || (premiumMember = "yes" && offerGoodDate >= purchaseDate));
+alert('I can purchase? ' + canPurchase);
 
 console.log((itemsPurchasedMin < itemsPurchasedAct && offerGoodDate >= purchaseDate) || (premiumMember = "yes" && offerGoodDate >= purchaseDate));
