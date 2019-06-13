@@ -3,10 +3,10 @@
 //... rest of javascript code
 console.log('Hello from external JavaScript!');
 
-//alert("Welcome to my website!");
+alert("Welcome to my website!");
 
-//var userInput = prompt('What is your favorite color?');
-//console.log('Great, my favorite color is also ' + userInput);
+var userInput = prompt('What is your favorite color?');
+console.log('Great, my favorite color is also ' + userInput);
 
 //Complete exercise 3 from the previous lesson, but write your code in the external.js file instead of in the console.
 //
