@@ -1,5 +1,5 @@
 "use strict";
-
+(function(){
 //Loops - Exercise #2
 // Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table
 // for that number (just multiply by the numbers 1 through 10)
@@ -69,12 +69,12 @@ for(var stop = 1; stop < 11; stop++){
 // 88888888
 // 999999999
 
-// var num = 1;
-//  while(num <= 999999999) {
-//      console.log(num);
-//      if(num )
-//
-//  }
+var num = 1;
+ while(num <= 999999999) {
+     console.log(num);
+     if(num )
+
+ }
 
 
 // Loops - Exercise #5
@@ -144,3 +144,4 @@ for(var num = 100; num >= 5; num -= 5) {
 // Here is an odd number: 45
 // Here is an odd number: 47
 // Here is an odd number: 49
+})();
