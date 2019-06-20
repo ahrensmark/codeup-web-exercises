@@ -18,9 +18,13 @@
 // 7 x 9 = 63
 // 7 x 10 = 70
 
-function showMultiplicationTable(num) {
-
+var showMultiplicationTable = function(num) {
+    for (var y = 1; y <= 10; y++) {
+        console.log(num + " x " + y + " = " + (parseInt(num) * y));
+    }
 }
+    showMultiplicationTable(1);
+
 // var num = 7;
 // var y = 0;
 //
@@ -28,9 +32,7 @@ function showMultiplicationTable(num) {
 //     y++;
 //     console.log(num + " x " + y + " = " + (num * y) );
 // }
-for (var num = 7, y = 0; y <= 10; y++) {
-    console.log(num + " x " + y + " = " + (num * y));
-}
+
 
 // Loops - Exercise #3
 // Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200
@@ -69,12 +71,25 @@ for(var stop = 1; stop < 11; stop++){
 // 88888888
 // 999999999
 
-var num = 1;
- while(num <= 999999999) {
-     console.log(num);
-     if(num )
 
- }
+    var christmasTree = function() {
+        for (var outer = 1; outer <= 9; outer++) {
+            var outer = '';
+            for (var inner = 1; inner <= outer; inner++) {
+                outer += outer;
+            }
+            console.log(outer);
+        }
+    };
+            christmasTree();
+
+
+// var num = 1;
+//  while(num <= 999999999) {
+//      console.log(num);
+//      if(num )
+//
+//  }
 
 
 // Loops - Exercise #5
@@ -107,41 +122,5 @@ for(var num = 100; num >= 5; num -= 5) {
     console.log(num);
 }
 
-// Break and Continue - Exercise #2
-// Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the
-// user if they enter invalid input.
 
-
-//Break and continue - Exercise #3
-// Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
-//     Your output should look like this:
-//
-//
-// Number to skip is: 27
-//
-// Here is an odd number: 1
-// Here is an odd number: 3
-// Here is an odd number: 5
-// Here is an odd number: 7
-// Here is an odd number: 9
-// Here is an odd number: 11
-// Here is an odd number: 13
-// Here is an odd number: 15
-// Here is an odd number: 17
-// Here is an odd number: 19
-// Here is an odd number: 21
-// Here is an odd number: 23
-// Here is an odd number: 25
-// Yikes! Skipping number: 27
-// Here is an odd number: 29
-// Here is an odd number: 31
-// Here is an odd number: 33
-// Here is an odd number: 35
-// Here is an odd number: 37
-// Here is an odd number: 39
-// Here is an odd number: 41
-// Here is an odd number: 43
-// Here is an odd number: 45
-// Here is an odd number: 47
-// Here is an odd number: 49
 })();
