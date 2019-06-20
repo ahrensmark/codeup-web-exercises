@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6803289c-6038-4483-af51-255b05bb1dec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/js/planets-string.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/planets-string.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/split-join.html" beforeDir="false" afterPath="$PROJECT_DIR$/split-join.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/planets-string.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+            <state relative-caret-position="450">
+              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -55,8 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/forms.html" />
-        <option value="$PROJECT_DIR$/Selectors Exercise.htm" />
         <option value="$PROJECT_DIR$/css/selectors.css" />
         <option value="$PROJECT_DIR$/welcome.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
@@ -103,8 +100,10 @@
         <option value="$PROJECT_DIR$/iterating_arrays_js.html" />
         <option value="$PROJECT_DIR$/js/iterating.js" />
         <option value="$PROJECT_DIR$/planets-js.html" />
-        <option value="$PROJECT_DIR$/js/planets-array.js" />
         <option value="$PROJECT_DIR$/split-join.html" />
+        <option value="$PROJECT_DIR$/js/objects.js" />
+        <option value="$PROJECT_DIR$/objects.html" />
+        <option value="$PROJECT_DIR$/js/planets-array.js" />
         <option value="$PROJECT_DIR$/js/planets-string.js" />
       </list>
     </option>
@@ -252,12 +251,12 @@
       <workItem from="1561034936465" duration="62000" />
       <workItem from="1561035086097" duration="7000" />
       <workItem from="1561035242492" duration="11000" />
-      <workItem from="1561038892523" duration="6392000" />
+      <workItem from="1561038892523" duration="7536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="236556000" />
+    <option name="totallyTimeSpent" value="237700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="0" />
@@ -298,12 +297,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/computer-laptop-work-place-camera-705164.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -564,10 +557,24 @@
     <entry file="file://$PROJECT_DIR$/media-queries .html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/objects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/objects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/planets-array.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        <state relative-caret-position="299">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -587,8 +594,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/planets-string.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        <state relative-caret-position="450">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
