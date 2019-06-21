@@ -11,6 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+    var person = {
+        firstName: "Mark",
+        lastName: "Ahrens"
+    };
+    console.log(person.firstName);
+    console.log(person.lastName);
 
     /**
      * TODO:
@@ -21,6 +27,17 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    // var person = {
+    //     firstName: "Mark",
+    //     lastName: "Ahrens",
+    //     sayHello: function() {
+    //         return "Hello from ";
+    //         console.log(sayHello())
+    //     }
+    // };
+
+
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +53,34 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron',
+        amount: 180},
+
+        {name: 'Ryan',
+        amount: 250},
+
+        {name: 'George',
+        amount: 320}
+    ];
+    var discountPercent = .12;
+    var discountAmountMin = 200;
+
+    shoppers.forEach(function(shopper) {
+        if(shoppers.amount > discountAmountMin) {
+            var amountToPay = shoppers.amount - (shoppers.amount * discountPercent);
+            var discountAmount = shoppers.amount * discountPercent;
+            console.log(shopper.name + " 's discount is " + discountPercent + " or $" + discountAmount + " with an amount to pay of $ " + amountToPay);
+        } else if(shopper.amount <= discount.amount) {
+            amountToPay = shopper.amount;
+            console.log(shopper.name + " 's discount is " + discountPercent + " or $" + discountAmount + " with an amount to pay of $ " + amountToPay);
+        }
+    });
+
+
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,31 +94,54 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+var books = [
+        {
+        title: "WHERE THE CRAWDADS SING",
+        author: {
+            firstName:"Delia",
+            lastName:"Owens"
+        }
+        },
+        {
+            title: "MRS. EVERYTHING",
+            author: {
+                firstName:"Jennifer",
+                lastName:"Weiner"
+            }
+        },
+        {
+            title: "TOM CLANCY: ENEMY CONTACT",
+            author: {
+                firstName:"Mike",
+                lastName:"Maden"
+            }
+        },
+        {
+            title: "THE ORACLE",
+            author: {
+                firstName:"Clive",
+                lastName:"Cussler"
+            }
+        },
+        {
+            title: "UNSOLVED",
+            author: {
+                firstName:"James",
+                lastName:"Patterson"
+            }
+        }];
+    console.log(books[4].title);
+    console.log(books[4].author.firstName);
 
-    /**
-     * TODO:
-     * Loop through the books array and output the following information about
-     * each book:
-     * - the book number (use the index of the book in the array)
-     * - the book title
-     * - author's full name (first name + last name)
-     *
-     * Example Console Output:
-     *
-     *      Book # 1
-     *      Title: The Salmon of Doubt
-     *      Author: Douglas Adams
-     *      ---
-     *      Book # 2
-     *      Title: Walkaway
-     *      Author: Cory Doctorow
-     *      ---
-     *      Book # 3
-     *      Title: A Brief History of Time
-     *      Author: Stephen Hawking
-     *      ---
-     *      ...
-     */
+
+    var x = 1;
+    books.forEach(function(book) {
+        console.log("Book # " + x++);
+        console.log('Title: ' + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---");
+    });
+
 
     /**
      * Bonus:
