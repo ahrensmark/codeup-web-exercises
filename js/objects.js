@@ -27,15 +27,12 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    // var person = {
-    //     firstName: "Mark",
-    //     lastName: "Ahrens",
-    //     sayHello: function() {
-    //         return "Hello from ";
-    //         console.log(sayHello())
-    //     }
-    // };
 
+    person.sayHello = function () {
+        return "Hello from " + person.firstName + " " + person.lastName + "!";
+
+    };
+console.log(person.sayHello());
 
 
 
@@ -63,23 +60,53 @@
         {name: 'George',
         amount: 320}
     ];
-    var discountPercent = .12;
-    var discountAmountMin = 200;
-
-    shoppers.forEach(function(shopper) {
-        if(shoppers.amount > discountAmountMin) {
-            var amountToPay = shoppers.amount - (shoppers.amount * discountPercent);
-            var discountAmount = shoppers.amount * discountPercent;
-            console.log(shopper.name + " 's discount is " + discountPercent + " or $" + discountAmount + " with an amount to pay of $ " + amountToPay);
-        } else if(shopper.amount <= discount.amount) {
-            amountToPay = shopper.amount;
-            console.log(shopper.name + " 's discount is " + discountPercent + " or $" + discountAmount + " with an amount to pay of $ " + amountToPay);
+    //create a function to calculate the discount
+    // function calculateDiscount(total){
+    //     var output = 0;
+    //     if (total > 200){
+    //         output = total * .12;
+    //     }
+    //     return output;
+    // }
+    function calculateDiscount(total) {
+        var output = 0;
+        if(total > 200) {
+            output = total * .12;
         }
-    });
+        return output;
+    }
 
+    //create a function to convert number to currency
+    function convertToCurrency(num){
+        return "$" + num.toFixed(2);
+    }
 
+    //display individual info for each shopper
+    function displayShopperInfo(shopper){
+        //default empty string
+        var output = "";
+        //var stores total amount
+        var amount = convertToCurrency(shopper.amount);
+        //var stores discount to be applied
+        var discount = convertToCurrency(calculateDiscount(shopper.amount));
+        //var stores final total
+        var finalAmount = convertToCurrency(shopper.amount - calculateDiscount(shopper.amount));
+        //concatenate onto empty string
+        output += shopper.name + " spent " + amount;
+        output += " and received a discount of " + discount;
+        output += " and paid " + finalAmount;
+        //return final string
+        return output;
+    }
 
+    //display info for all shoppers
+    function displayShoppersInfo(shoppers){
+        shoppers.forEach(function(shopper){
+            console.log(displayShopperInfo(shopper));
+        });
+    }
 
+    displayShoppersInfo(shoppers);
 
 
     /** TODO:
@@ -153,5 +180,24 @@ var books = [
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(title, firstName, lastName){
+        var book = {};
+        book.title = title;
+        book.author = {};
+        book.author.firstName = firstName;
+        book.author.lastName = lastName;
+        return book;
+    }
 
+    books.push(createBook("How to Draw Manga","Katy","Coope"));
+    console.log(books);
+
+    function showBookInfo(book,i){
+        var output = "";
+        output += "Book # " + (i+1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---" + "\n";
+        console.log(output);
+    }
 })();

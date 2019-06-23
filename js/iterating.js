@@ -43,14 +43,6 @@
     names.forEach(function(name) {
         console.log("one of your cohorts is named: " + name);
     });
-    //  function testEachForFalsy(array) {
-    //     array.forEach(function(element,i) {
-    //         if(element) {
-    //             alert("....");
-    //             return i;
-    //         }
-    //     });
-
 
 
     /**
@@ -91,16 +83,6 @@
     }
     console.log(last(array));
 
-    // function secondItem([numlist]) {
-    //     return numlist[1]
-    //
-    // }
-    // console.log(secondItem)
-    //
-    // function lastItem([numlist]) {
-    //     return numlist[4]
-    //
-    // }
 
 
 })();

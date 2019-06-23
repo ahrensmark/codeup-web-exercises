@@ -20,10 +20,10 @@
 
 var showMultiplicationTable = function(num) {
     for (var y = 1; y <= 10; y++) {
-        console.log(num + " x " + y + " = " + (parseInt(num) * y));
+        console.log(num + " x " + y + " = " + (y * parseInt(num)));
     }
-}
-    showMultiplicationTable(1);
+};
+    showMultiplicationTable(7);
 
 // var num = 7;
 // var y = 0;
@@ -46,16 +46,23 @@ var showMultiplicationTable = function(num) {
 // ...
 //Math.floor(Math.random() * 50) + 50;
 
+    var randomEvenOdd = function() {
+        for (var k = 1; k < 11; k++) {
+            var randomNum = (Math.floor(Math.random() * 200) + 20);
+            var remainderNum = randomNum % 2;
+            switch (remainderNum) {
+                case 0:
+                    console.log(randomNum + " is even");
+                    break;
+                default:
+                    console.log(randomNum + ' is odd');
 
-for(var stop = 1; stop < 11; stop++){
-    var randomNum = (Math.floor(Math.random() * 200) + 20);
-// randomNum = (Math.floor(Math.random() * 200) + 20);
-    if(randomNum % 2  === 0) {
-        console.log(randomNum + " is even");
-    } else(randomNum % 2 !== 0); {
-        console.log(randomNum + " is odd");
+            }
+        }
     }
-}
+
+    randomEvenOdd();
+
 
 // Loops - Exercise #4
 // Create a for loop that uses console.log to create the output shown below.
@@ -74,11 +81,11 @@ for(var stop = 1; stop < 11; stop++){
 
     var christmasTree = function() {
         for (var outer = 1; outer <= 9; outer++) {
-            var outer = '';
+            var output = '';
             for (var inner = 1; inner <= outer; inner++) {
-                outer += outer;
+                output += outer;
             }
-            console.log(outer);
+            console.log(output);
         }
     };
             christmasTree();
@@ -118,9 +125,9 @@ for(var stop = 1; stop < 11; stop++){
 // 5
 
 
-for(var num = 100; num >= 5; num -= 5) {
-    console.log(num);
-}
+// for(var num = 100; num >= 5; num -= 5) {
+//     console.log(num);
+// }
 
 
 })();

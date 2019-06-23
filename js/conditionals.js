@@ -1,96 +1,5 @@
 "use strict";
-//var x = 5;
 
-//if (x === 5) {
-  //  console.log("X is equal to five.")
-//}
-
-//function isItANumber(parameter) {
-//    if (isNaN(parameter) === false) {
-//        return "that's a number!"
-//    } else {
-//        return "That's not a number!"
-//    }
-//}
-   // console.log(isItANumber(77));
-   // console.log(isItANumber(BOB));
-
-
-//var haveCow = false;
-//var haveGoat = true;
-
-//if (haveCow === true) {
-  //  console.log("Milking Betty");
-//} else if (haveGoat === true){
-    //console.log("Milking Billy Sue");
-//} else {
-  //  console.log("Heading to Kroger");
-//}
-
-//function isThisThirtyFive(parameter) {
-    //if(parameter > 35) {
-      //  return "The number " + parameter + " is greater than 35."
-    //} else if (parameter < 35) {
-      //  return "The number " + parameter + " is less than 35."
-    //} else if (parameter === 35) {
-      //  return "This is 35.";
-    //} else {
-      //  return "That's not a number."
-    //}
-  //  return (isNaN(parameter)) ? "That's not a number." : "That's a number.";
-//}
-
-//console.log(isThisThirtyFive(34));
-//console.log(isThisThirtyFive(36));
-//console.log(isThisThirtyFive(35));
-//console.log(isThisThirtyFive("Tim"));
-
-//var doWeHaveMilk = true;
-//var action = (doWeHaveMilk) ? "Let's have some cereal." : "Going to Aldi's";
-//console.log(action);
-
-//var color = prompt('What is your favorite color?').toLocaleLowerCase();
-//switch (color) {
-  //  case "green":
-    //    alert("What a coincidence, that's my favorite too.");
-      //  break;
-    //case "orange":
-      //  alert("That's my sister's favorite.");
-     //   break;
-   // default:
-     //   alert(color + " is a great color too.");
-       // break;
-//}
-
-//var animal = prompt("What animal are we milking?");
-//switch (animal) {
-  //  case "cow":
-  //      console.log("Milking Betty Lue");
-  //      break;
-  //  case "goat":
-  //      console.log("Milking Bertha");
-  //      break;
-  //  case "camel":
-  //      console.log("Milking Ophelia");
-  //  default:
-  //      console.log("Go to Food Lion");
-  //      break;
-//}
-
-//var favMeat = prompt("what is your favorite lunchmeat?");
-//switch (favMeat) {
- //   case "olive loaf":
-   //     alert("Bold choice");
-     //   break;
- //   case "brisket":
- //       alert("great choice");
- //       break;
- //   default:
- //       alert(favMeat + ", are you crazy?");
- //       break;
-
-//}
-//=====================================================================
 /**
  * TODO#1:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -106,20 +15,27 @@
  *
  * Can you refactor your code to use functions?
  */
-var userWantsToContinue = confirm('Would you like to enter a number?');
-if (userWantsToContinue === true) {
-var aNumber = Number(prompt("Please enter a number."));
-if (aNumber%2 == 0){
-    alert(aNumber + " is even");
-} else {
-    alert(aNumber + " is odd");
-}
-alert(aNumber + " + 100 = " + (aNumber + 100));
-if (aNumber >= 0) {
-    alert(aNumber + " is positive.");
-} else {
-    alert(aNumber + " is negative");
-}
+// var userWantsMath = confirm("Would you like to do some math?");
+//
+// if (userWantsMath === true) {
+//     var userNumber = Number(prompt("Give me a number!"));
+//     if (isNaN(userNumber) === true) {
+//         alert(userNumber + " is not a number.");
+//     }else {
+//         alert((userNumber % 2 === 0) ? "That number is even." : "That number is odd.");
+//         alert(userNumber + " plus 100 is " + (userNumber + 100) + ".");
+//         if (isNegative(userNumber)) {
+//             alert("That number is negative.");
+//         } else {
+//             alert("That number is positive.")
+//         }
+//     }
+// }
+//
+// function isNegative(num) {
+//     return num < 0;
+// }
+
 
 /* ########################################################################## */
 
@@ -140,19 +56,42 @@ if (aNumber >= 0) {
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-var color = "red";
+//var color = "red";
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//
+// function analyzeColor(color) {
+//     color = color.toLowerCase();
+//     if (color === "red") {
+//         return "Strawberries are red";
+//     } else if (color === "blue") {
+//         return "blue is the color of the sky";
+//     } else if (color === "cyan") {
+//         return "I don't know anything about cyan";
+//     } else {
+//         return color + " sure is a color.";
+//     }
+// }
+//
+// console.log(analyzeColor("cyan"));
+// console.log(analyzeColor("brown"));
+
+
 
 function analyzeColor(color) {
+    color = color.toLowerCase();
     if(color === "blue") {
-    alert("blue is the color of the sky");
-} else if(color === "red") {
-    alert("Strawberries are red");
-} else if(color === "cyan") {
-    alert("I don't know anything about cyan");
-}
+        return "blue is the color of the sky";
+    } else if(color === "red") {
+        return "Strawberries are red";
+    } else if(color === "cyan") {
+        return "I don't know anything about cyan";
+    } else {
+        return color + " is a pretty color too.";
+    }
 }
 
-console.log(analyzeColor(blue));
+console.log(analyzeColor("blue"));
 
 
 // Don't change the next two lines!
@@ -160,35 +99,52 @@ console.log(analyzeColor(blue));
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color everytime the page loads)
-var color = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = color[Math.floor(Math.random() * color.length)];
+
 /**
  * TODO#3:
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message everytime you refresh the page
  */
+var color = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = color[Math.floor(Math.random() * color.length)];
 
+function analyzeColor(randomColor) {
+    randomColor = randomColor.toLowerCase();
+    if(randomColor === "blue") {
+        return "blue is the color of the sky";
+    } else if(randomColor === "red") {
+        return "Strawberries are red";
+    } else if(randomColor === "cyan") {
+        return "I don't know anything about cyan";
+    } else {
+        return randomColor + " is a pretty color too.";
+    }
+}
 console.log(analyzeColor(randomColor));
 
 /**
  * TODO#4:
  * Refactor your above function to use a switch-case statement
  */
-function analyzeColor(randomColor) {
-  switch(randomColor) {
+function analyzeColorSwitch(color) {
+    color = color.toLowerCase();
+    var message;
+  switch(color) {
     case "blue":
-        return "blue is the color of the sky";
+        message = "blue is the color of the sky";
         break;
     case "red":
-        return "Strawberries are red";
+        message = "Strawberries are red";
         break;
     case "cyan":
-        return "I don't know anything about cyan";
+        message = "I don't know anything about cyan";
         break;
     default:
-        return color + " is beautiful";
+        message = color + " is beautiful";
  }
+   return message
 }
+console.log(analyzeColorSwitch(randomColor));
 
 
 /**
@@ -223,31 +179,26 @@ var color = prompt("What is your favorite color?");
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-var luckyNumber = Number(prompt("Enter the random number:"));
-var totalAmount = Number(prompt("What was the purchase total?"));
-var discountNone = 0;
-var discount1 = .1;
-var discount2 = .25;
-var discount3 = .35;
-var discount4 = .5;
-var dicount6 = 1;
-function calculateTotal(luckyNum, initialTotal) {
-    Switch (luckNum) {
-    case 0:
-        return initalTotal;
+
+function calculateTotal(luckNum, initialTotal) {
+    switch (luckNum) {
+        case 0:
+        return initialTotal;
         case 1:
             return initialTotal *.9;
         case 2:
             return initialTotal *.75;
         case 3:
-
+            return initialTotal *.65;
         case 4:
-
+            return initialTotal * .5;
         default:
             return initialTotal * 0;
     }
 }
-    console.log(calculateTotal(o,100));
+    console.log(calculateTotal(1,100));
+    console.log(calculateTotal(2,100));
+    console.log(calculateTotal(4,100));
 
 /**
  * TODO#7:
@@ -257,8 +208,8 @@ function calculateTotal(luckyNum, initialTotal) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-
-var userTotal = Number(prompt("What was your total today"));
-alert("Your luck number was " + luckyNumber + "meaning you pay " + calculateTotal(luckyNumber,initialPrice).toFixed(2))
+ var luckyNumber = Math.floor(Math.random() * 6);
+//
+ var userTotal = Number(prompt("What was your total today"));
+ alert("Your total is $" + userTotal + " Your lucky number was " + luckyNumber + " meaning you pay $" + calculateTotal(luckyNumber,userTotal).toFixed(2))
 
