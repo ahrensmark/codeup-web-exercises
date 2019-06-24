@@ -52,18 +52,19 @@
 
         // TODO: Set text color on every other list item to grey
         for (var i = 0; i < listItems.length; i += 2) {
-            var dBid = listItems[i].style.color = 'gray';
-            console.log(dBid);
+            var dbid = listItems[i].style.color = 'gray';
         }
-        // TODO: Set text color of li with dbid = 1 to blue
 
+        // TODO: Set text color of li with dbid = 1 to blue
+           // var dataColor = document.getElementsByClassName("data-dbid");
+            listItems[0].style.color = 'blue';
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-            var subParagraphs = document.getElementsByClassName('sub-paragraph');
-
+            var subParagraphs = document.getElementsByClassName('sub-paragraph')[0];
+            console.log(subParagraphs.innerText);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-
+            subParagraphs.innerText = "Mission Accomplished!";
     })();
 </script>
 </body>
