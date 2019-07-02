@@ -23,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/jquery_exercises.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -288,12 +288,12 @@
       <workItem from="1561557393727" duration="102000" />
       <workItem from="1561639718815" duration="34000" />
       <workItem from="1562073757097" duration="1292000" />
-      <workItem from="1562083130301" duration="2086000" />
+      <workItem from="1562083130301" duration="2343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331009000" />
+    <option name="totallyTimeSpent" value="331266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -627,7 +627,7 @@
     <entry file="file://$PROJECT_DIR$/jquery_exercises.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
         </state>
       </provider>
     </entry>

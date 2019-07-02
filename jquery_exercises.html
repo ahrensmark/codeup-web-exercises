@@ -8,12 +8,13 @@
 <body>
 <!--Id Selectors-->
 <!--Class Selectors-->
+<!--Element Selectors-->
 <!--Remove your custom jQuery code from previous exercises.-->
-<!--Update your code so that at least 3 different elements have the same class named codeup.-->
-<!--Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.-->
-<!--Remove the class from one of the elements. Refresh and test that the border has been removed.-->
-<!--Give another element an id of codeup. Does this element get a border now?-->
-    <div id="div-change">
+<!--Using jQuery, set the font-size of all li elements to 20px.-->
+<!--Craft selectors that highlight all the h1, p, and li elements.-->
+<!--Create a jQuery statement to alert the contents of your h1 element(s).-->
+
+<div id="div-change">
         <h1 class="codeup">jQuery Practice</h1>
         <p class="codeup">jQuery makes selecting elements in the DOM very simple and has a powerful and optimized selector engine. </p>
         <ul class="code">
@@ -27,12 +28,14 @@
 <script>
 "use strict";
 
-    $('.codeup').css('border', '1px solid red');
+    $('li').css('font-size', '20px');
+    $('h1,p,li').css('background-color', 'lightgreen');
+    var contents = $('h1').html();
+    alert(contents);
 
 
 
 </script>
-<!--$('.important').css('background-color', 'yellow');-->
 
 </body>
 </html>
