@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>jQuery exercises - mouse events</title>
 
 </head>
 <body>
-<!--Id Selectors-->
-<!--Class Selectors-->
-<!--Element Selectors-->
 
 
 <div id="div-change">
-        <h1 class="codeup">jQuery Practice</h1>
-        <p class="codeup">jQuery makes selecting elements in the DOM very simple and has a powerful and optimized selector engine. </p>
+        <h1>jQuery Practice</h1>
+        <p>jQuery makes selecting elements in the DOM very simple and has a powerful and optimized selector engine. </p>
         <ul class="code">
             <li class="codeup">ID Selector</li>
             <li>Class Selector</li>
@@ -25,14 +22,23 @@
 <script>
 "use strict";
 
-    $('li').css('font-size', '20px');
-    $('h1,p,li').css('background-color', 'lightgreen');
-    var contents = $('h1').html();
-    alert(contents);
-    $('#div-change').css('border', '2px solid blue');
 
+    $('h1').click(function() {
+        $(this).css("background-color", "gray");
+    });
 
+    $('p').dblclick(function() {
+        $(this).css("font-size", "18px");
+    });
 
+    $('ul').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
 </script>
 
 </body>

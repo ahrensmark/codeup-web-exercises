@@ -22,8 +22,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jquery_exercises.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="630">
+              <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+              <folding>
+                <element signature="e#937#949#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -288,12 +291,12 @@
       <workItem from="1561557393727" duration="102000" />
       <workItem from="1561639718815" duration="34000" />
       <workItem from="1562073757097" duration="1292000" />
-      <workItem from="1562083130301" duration="2634000" />
+      <workItem from="1562083130301" duration="3667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331557000" />
+    <option name="totallyTimeSpent" value="332590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -626,8 +629,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery_exercises.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="630">
+          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding>
+            <element signature="e#937#949#0" />
+          </folding>
         </state>
       </provider>
     </entry>
