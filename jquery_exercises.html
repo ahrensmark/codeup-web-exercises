@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="js/my-custom-javascript.js"></script>"
     <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
+<!--Id Selectors-->
+
+    <div id="div-change">
+        <h1 id="id-change">jQuery Practice</h1>
+        <p class="class-change">jQuery makes selecting elements in the DOM very simple and has a powerful and optimized selector engine. </p>
+        <ul class="ul-change">
+            <li id="li-change">ID Selector</li>
+            <li id="li-change">Class Selector</li>
+            <li id="li-change">Element Selector</li>
+        </ul>
+    </div>
+
 <script>
 "use strict";
-$(document).ready(function() {
-alert( 'The DOM has finished loading!' );
-});
+$('#id-change');
+var contents = $('#id-change').html();
+alert(contents);
+
+$('#ul-change');
+var newContent = $('#ul-change');
+alert(newContent);
 </script>
 
 
