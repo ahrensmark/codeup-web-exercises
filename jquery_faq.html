@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ exercise</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+        .highlight {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+<button>Click to add or remove answers</button>
+<dl>
+    <dt class="highlight">How old is the National Park System?</dt>
+    <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park.</dd>
+    <br>
+    <dt class="highlight">How many areas are in the National Park System?</dt>
+    <dd class="invisible">The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments, battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic rivers and trails, and the White House.</dd>
+    <br>
+    <dt class="highlight">How many people visit the national parks?</dt>
+    <dd class="invisible">Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
+    <br>
+    <dt class="highlight">Who is the director of the National Park Service?</dt>
+    <dd class="invisible">Dan Smith is the deputy director exercising the authority of director for the National Park Service.</dd>
+    <br>
+    <dt class="highlight">How far can I drive down island? Can I get to South Padre from here?</dt>
+    <dd class="invisible" class="invisible">Depending on current beach conditions, two-wheel drive vehicles may safely drive down on the first five miles of South Beach. After that, four-wheel drive is necessary as there are frequent pockets of soft sand. Even with a four-wheel drive vehicle, you cannot reach South Padre Island from here. Mansfield Channel forms the southern boundary of the park at the 60 mile marker and there is no bridge or ferry over it to get to South Padre Island.</dd>
+    <br>
+    <dt class="highlight">Is it always this windy? </dt>
+    <dd class="invisible">The average wind is approximately eleven miles per hour. Prevailing winds blow from the southeast in spring, summer and fall. During winter, the wind shifts direction more frequently with strong north winds blowing as cold fronts push south from the plains. The most
+        powerful cold fronts can produce winds that may reach 50 to 65 miles per hour!</dd>
+    <br>
+    <dt class="highlight">Where is the best shelling?</dt>
+    <dd class="invisible">Shelling is less a matter of "where" than a matter of "when". Shelling is best after a storm has passed through. Large storm surges push large amounts of debris and shells far up onto the beach. Other than that, it would be best to go to an isolated area down island where few people venture, and thus there are fewer shell collectors to pick them up before you. However, be aware that after the five-mile marker a four-wheel drive vehicle is needed because of the frequent pockets of deep, soft sand.</dd>
+    <br>
+    <dt class="highlight">Where can I go fishing and/or hunting?</dt>
+    <dd class="invisible">Fishing is permitted everywhere in the park except at Malaquite Beach directly in front of the visitor center. No hunting is permitted except for the taking of waterfowl by boat only in the Laguna Madre. Transporting any other lawfully taken wildlife through the park is prohibited.</dd>
+    <br>
+    <dt class="highlight">Are there sharks in the Gulf of Mexico?</dt>
+    <dd class="invisible">There are at least 33 species of shark in the Gulf of Mexico, but shark attacks at the National Seashore are extremely rare, the last having been sometime in the mid-1980's.</dd>
+    <br>
+    <dt class="highlight">Is there a lifeguard on duty?</dt>
+    <dd class="invisible">There is no lifeguard on duty and swimming is at your own risk. Occasionally, conditions can create rip currents. If caught in one, do not panic. Swim parallel to the beach until you are free from the flow pulling you out, then swim back to shore. Do NOT attempt to swim against the current pulling you out. Use caution when swimming and never swim alone.</dd>
+
+</dl>
+<script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        $("button").click(function(event){
+            $("dd").toggleClass("invisible");
+        });
+
+        $(".highlight").click(function(event){
+            $(this).next(".highlight").toggleClass("highlight");
+
+        });
+        // $('h1').click(function() {
+        //     $(this).css("background-color", "gray");
+        // });
+    });
+</script>
+</body>
+</html>
