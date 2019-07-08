@@ -20,8 +20,8 @@
         /*    background-color: #77AF00;*/
         /*}*/
     </style>
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
-<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </head>
 <body>
 <button id="button1">Click to add or remove answers</button>
@@ -87,32 +87,32 @@
 </section>
 <br><br>
 <!--Bonus section-->
-<!--<section>-->
-<!--<div class="container">-->
-<!--    <div class="row">-->
-<!--        <div class="col-4" >-->
-<!--            <img id="imgDaniel" src="img/daniel.jpg" alt="">-->
-<!--        </div>-->
-<!--        <div class="col-4" >-->
-<!--            <img id="imgDavid" src="img/David.jpg" alt="">-->
-<!--        </div>-->
-<!--        <div class="col-4" >-->
-<!--            <img id="imgSophie" src="img/Sophie.jpg" alt="">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row">-->
-<!--        <div class="col text-center">-->
-<!--            <button id="btnRotate">Rotate right</button>-->
-<!--        </div>-->
-<!--        <div class="col text-center">-->
-<!--            <button id="btnRotate1">Random</button>-->
-<!--        </div>-->
-<!--        <div class="col text-center">-->
-<!--            <button id="btnRotate2">Rotate left</button>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--</section>-->
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-4" >
+            <img id="imgDaniel" src="img/daniel.jpg" alt="">
+        </div>
+        <div class="col-4" >
+            <img id="imgDavid" src="img/David.jpg" alt="">
+        </div>
+        <div class="col-4" >
+            <img id="imgSophie" src="img/Sophie.jpg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <button id="btnRotate">Rotate right</button>
+        </div>
+        <div class="col text-center">
+            <button id="btnRotate1">Random</button>
+        </div>
+        <div class="col text-center">
+            <button id="btnRotate2">Rotate left</button>
+        </div>
+    </div>
+</div>
+</section>
 <br>
 <br><br><br>
 <script src="js/jquery.js"></script>
@@ -137,12 +137,11 @@
 
         });
         $("li").click(function(event) {
-                $(this).parent().children().first().css('background-color', 'lightblue');
+                $(this).parent().children().first().css('color', 'blue');
         });
-        // $("#btnRotate").click(function(event){
-        //     $('#imgDaniel').html();
-        //     $('#imgDaniel').html('#imgDavid')
-        // })
+        $("#btnRotate").click(function(event){
+            $('#imgDaniel').html('#imgDavid')
+        })
 
         // $('h1').click(function() {
         //     $(this).css("background-color", "gray");
