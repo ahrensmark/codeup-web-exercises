@@ -6,12 +6,14 @@
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<h1>Hardware Mark</h1>
 
-<table id="insertProducts">
+<table id="insertProducts" width = "800">
     <thead>
         <tr>
+            <th>Photo</th>
             <th>Title</th>
+            <th>Brand</th>
             <th>Quantity</th>
             <th>Price</th>
             <th>Categories</th>
@@ -54,7 +56,7 @@ console.log("GET request completed");
         var productsHTML = "";
         products.forEach(function(product) {
             productsHTML += "<tr>";
-            productsHTML += "<td>" + product.title + "</td>" + "<td>" + product.quantity + "</td>" + "<td>" + product.categories + "</td>" + "<td>" + "$" + product.price + "</td>";
+            productsHTML += "<td><img src='" + product.url+"' alt='"+ product.title +"'/>" + "</td>" + "<td>" + product.title + "</td>"+ "<td>" + product.brand + "</td>" +"<td>" + product.quantity + "</td>" + "<td>" + "$" + product.price + "</td>" + "<td>" + product.categories + " " + "</td>";
 
             productsHTML += "</tr>";
         });

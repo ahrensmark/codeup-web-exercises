@@ -1,34 +1,70 @@
 [
   {
+    "url": "img/hammer.jpeg",
     "title": "Hammer",
+    "brand": "Milwaukee",
     "quantity": 25,
     "categories": [
       "tool"
     ],
     "price": 20
   }, {
+  "url": "img/drill.jpeg",
   "title": "Drill",
+  "brand": "Dewalt",
   "quantity": 5,
   "categories": [
     "tool",
-    "powered"
+    "  powered"
   ],
   "price": 100
 }, {
+  "url": "img/mower.jpeg",
   "title": "Mower",
+  "brand": "John Deere",
   "quantity": 5,
   "categories": [
     "tool",
-    "gas",
-    "outdoor"
+    "  gas",
+    "  outdoor "
   ],
   "price": 200
 }, {
-  "title": "Screwdrivers",
+  "url": "img/screwdriver.jpeg",
+  "title": "Screwdriver",
+  "brand": "Craftsman",
   "quantity": 25,
   "categories": [
     "tool"
   ],
   "price": 10
+}, {
+  "url": "img/LG.jpeg",
+  "title": "Dishwasher",
+  "brand": "LG",
+  "quantity": 8,
+  "categories": [
+    "Appliances"
+  ],
+  "price": 1000
+}, {
+  "url": "img/armstrong.jpeg",
+  "title": "Wood Floor",
+  "brand": "Armstrong",
+  "quantity": 25,
+  "categories": [
+    "Flooring"
+  ],
+  "price": 10
+}, {
+  "url": "img/valspar.jpeg",
+  "title": "Paint",
+  "brand": "Valspar",
+  "quantity": 200,
+  "categories": [
+    "Paint"
+  ],
+  "price": 22
 }
+
 ]
