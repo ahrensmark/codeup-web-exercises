@@ -5,7 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6803289c-6038-4483-af51-255b05bb1dec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax-blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/ajax-store.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/shop-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery.slim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery.slim.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json/blog.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json/inventory.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax-store.html" beforeDir="false" afterPath="$PROJECT_DIR$/ajax-store.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jquery_faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/jquery_faq.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,11 +58,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jquery_faq.html">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="171" column="14" lean-forward="true" selection-start-line="165" selection-start-column="7" selection-end-line="171" selection-end-column="14" />
-            </state>
+            <state relative-caret-position="-1322" />
           </provider>
         </entry>
       </file>
@@ -34,9 +69,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -46,11 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/getting_git_bonus.ccs.css" />
-        <option value="$PROJECT_DIR$/css/getting_git_bonus.css" />
-        <option value="$PROJECT_DIR$/getting_git_bonus.html" />
-        <option value="$PROJECT_DIR$/getting_git.html" />
-        <option value="$PROJECT_DIR$/css/getting_git.css" />
         <option value="$PROJECT_DIR$/media-queries.htm" />
         <option value="$PROJECT_DIR$/css/media-queries.css" />
         <option value="$PROJECT_DIR$/grid-layout.html" />
@@ -95,15 +126,20 @@
         <option value="$PROJECT_DIR$/js/jquery.js" />
         <option value="$PROJECT_DIR$/jquery_exercises.html" />
         <option value="$PROJECT_DIR$/konami.html" />
-        <option value="$PROJECT_DIR$/ajax-store.html" />
         <option value="$PROJECT_DIR$/jquery_faq.html" />
+        <option value="$PROJECT_DIR$/json/inventory.json" />
+        <option value="$PROJECT_DIR$/json/blog.json" />
+        <option value="$PROJECT_DIR$/ajax-blog.html" />
+        <option value="$PROJECT_DIR$/css/ajax-store.css" />
+        <option value="$PROJECT_DIR$/ajax-store.html" />
+        <option value="$PROJECT_DIR$/css/package.json" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="724" />
+    <option name="height" value="725" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -113,7 +149,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -125,32 +187,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,18 +200,23 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/json" />
       <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/json" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -283,18 +325,25 @@
       <workItem from="1562165394402" duration="67000" />
       <workItem from="1562165463937" duration="8952000" />
       <workItem from="1562179295175" duration="6060000" />
-      <workItem from="1562588450481" duration="20849000" />
+      <workItem from="1562588450481" duration="21598000" />
+      <workItem from="1562763384926" duration="40000" />
+      <workItem from="1562764214693" duration="21000" />
+      <workItem from="1562764255073" duration="14000" />
+      <workItem from="1562774277825" duration="1842000" />
+      <workItem from="1562778813084" duration="23000" />
+      <workItem from="1562782679783" duration="9343000" />
+      <workItem from="1562847648417" duration="76000" />
+      <workItem from="1562847846118" duration="757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="379662000" />
+    <option name="totallyTimeSpent" value="392527000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="722" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="725" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15024233" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -311,7 +360,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5273973" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.52698416" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.24383561" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -329,101 +378,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/media-queries refractor.css" />
-    <entry file="file://$PROJECT_DIR$/grid-layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/grid-layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1_simple.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js-intro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/js-html-intro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inline_js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/external.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/external_js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="27" column="26" selection-start-line="25" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media-queries .html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/planets-array.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planets-js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/split-join.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/planets-string.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="69" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="30" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -484,13 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/iterating.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iterating_arrays_js.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -531,13 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="590">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -617,31 +561,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ajax-store.htm" />
+    <entry file="file://$PROJECT_DIR$/jquery_faq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/iterating.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="87" column="5" selection-end-line="87" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/planets-array.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="51" column="25" selection-start-line="3" selection-start-column="3" selection-end-line="51" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/planets-string.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="69" selection-start-line="3" selection-start-column="3" selection-end-line="30" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="9789" lean-forward="true" selection-start-line="9789" selection-end-line="9789" />
+        <state relative-caret-position="1072">
+          <caret line="9789" selection-end-line="9813" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax-store.html">
+    <entry file="file://$PROJECT_DIR$/ajax-blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="199">
+          <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax-store.htm">
+    <entry file="file://$PROJECT_DIR$/json/blog.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/inventory.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ajax-store.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.slim.min.map">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bootstrap.min.js.map">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css.map">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jquery_faq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="171" column="14" lean-forward="true" selection-start-line="165" selection-start-column="7" selection-end-line="171" selection-end-column="14" />
+    <entry file="file://$PROJECT_DIR$/json/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/shop-item.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax-store.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1322" />
       </provider>
     </entry>
   </component>

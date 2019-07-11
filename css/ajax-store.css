@@ -1,0 +1,8 @@
+h1 {
+    padding-left: 70px;
+}
+
+table, th, tr, td {
+    border: 1px solid blue;
+    text-align: center;
+}
