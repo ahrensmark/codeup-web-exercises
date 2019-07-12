@@ -5,6 +5,7 @@
     <title>San Antonio Weather</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <!--Create a new HTML file called weather_map.html.-->
@@ -48,11 +49,27 @@
     </div>
 
     <br>
+<!--Mapbox map HTML    -->
+<!--    <h1>My First Mapbox Map!</h1>-->
+    <label for="latitude">Enter Latitude</label>
+    <input type="number" id="latitude" name="latitude">
+    <input type="submit">
+    <br>
+    <label for="longitude">Enter longitude</label>
+    <input type="number" id="longitude" name="longitude">
+    <input type="submit">
+    <br>
+    <!-- The HTML element that serves as the Mapbox container -->
+    <section id='map' class="mapWidth"></section>
+
+
     <button id="weather1">Click to update</button>
+
     <script src="js/keys.js"></script>
     <script src="js/jquery.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <script src="js/mapbox-geocoder-utils.js"></script>
+
     <script>
         (function() {
             "use strict";
@@ -89,37 +106,89 @@
 
             //Build 3 day forecast
             var icons = [
-                {
-                    'clear-day': "img/weather-icons/wi-day-sunny.svg",
-                    'clear-night': "img/weather-icons/wi-night-clear.svg",
-                    'rain': "img/weather-icons/wi-rain.svg",
-                    'snow': "img/weather-icons/wi-snow.svg",
-                    'sleet': "img/weather-icons/wi-sleet.svg",
-                    'wind': "img/weather-icons/wi-strong-wind.svg",
-                    'fog': "img/weather-icons/wi-fog.svg",
-                    'cloudy': "img/weather-icons/wi-cloud.svg",
-                    'partly-cloudy-day': "img/weather-icons/wi-day-sunny-overcast.svg",
-                    'partly-cloudy-night': "img/weather-icons/wi-night-alt-partly-cloudy.svg",
-                }];
-            // function iconArray(input1) {
-            //     for(var j = 0; j < icons.length-1; j++) {
-            //         if(forecast.daily.data[i].icon === icons[j]);
-            //     console.log(icons)
-            //     }
-
+                { forecasted: "clear-day",
+                  url:  "img/weather-icons/svg/wi-day-sunny.svg"},
+                { forecasted: "clear-night",
+                  url:  "img/weather-icons/svg/wi-night-clear.svg"},
+                { forecasted: "rain",
+                  url:  "img/weather-icons/svg/wi-rain.svg"},
+                {  forecasted: "snow",
+                  url:  "img/weather-icons/svg/wi-snow.svg"},
+                { forecasted: "sleet",
+                  url:  "img/weather-icons/svg/wi-sleet.svg"},
+                { forecasted: "wind",
+                  url:  "img/weather-icons/svg/wi-strong-wind.svg"},
+                { forecasted: "fog",
+                  url:  "img/weather-icons/svg/wi-fog.svg"},
+                { forecasted: "cloudy",
+                  url:  "img/weather-icons/svg/wi-cloud.svg"},
+                { forecasted: "partly-cloudy-day",
+                  url:  "img/weather-icons/svg/wi-day-sunny-overcast.svg"},
+                { forecasted: "partly-cloudy-night",
+                  url:  "img/weather-icons/svg/wi-night-alt-partly-cloudy.svg"}
+                ];
+            //iterate through icons array to match summary return.
+            function iconArray(forecast) {
+                for (var j = 0; j < icons.length; j++) {
+                    if (forecast.icon === icons[j].forecasted) {
+                        console.log(true);
+                    }
+                }
+            }
             function buildHTML(forecast) {
                 var forecastsHTML = "";
                 for (var i = 0; i < 3; i++) {
                     forecastsHTML += "<div class='col-4 border border-dark' id='bgColor'> <h3>" + forecast.daily.data[i].temperatureHigh.toFixed(0) + "°" + "/" + forecast.daily.data[i].temperatureLow.toFixed(0) + "°" + "</h3>";
-                    // forecastsHTML += "<p>" + input1.daily.data[i].icon + "</p>";
+                    iconArray(forecast.daily.data[i]);
+                    //forecastsHTML += "<p><img src='" + icons.url + "' alt='" +  "'/></p>";
                     forecastsHTML += "<p>" + 'Forecast: ' + forecast.daily.data[i].icon + "</p>";
                     forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity + "</p>";
                     forecastsHTML += "<p>" + 'Wind: ' + forecast.daily.data[i].wind + "</p>";
                     forecastsHTML += "<p>" + 'Pressure: ' + forecast.daily.data[i].pressure + "</p></div>";
                 }
-
-
+                //"<td><img src='" + product.url+"' alt='"+ "'/>"
             return forecastsHTML;
+            }
+
+
+            // var map = new mapboxgl.Map({
+            //     container: 'map',
+            //     style: 'mapbox://styles/mapbox/streets-v9',
+            //     zoom: 10,
+            //     center: [-98.4916, 29.4252]
+            // });
+            mapboxgl.accessToken = mapboxToken;
+            var coordinates = document.getElementById('coordinates');
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [-98.4916, 29.4252],
+                zoom: 4
+            });
+
+            var marker = new mapboxgl.Marker({
+                draggable: true
+            })
+                .setLngLat([-98.4916, 29.4252])
+                .addTo(map);
+
+            function onDragEnd() {
+                var lngLat = marker.getLngLat();
+                coordinates.style.display = 'block';
+                coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+            }
+
+            marker.on('dragend', onDragEnd);
+            function geocode(search, token) {
+                var baseUrl = 'https://api.mapbox.com';
+                var endPoint = '/geocoding/v5/mapbox.places/';
+                return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+                    .then(function(res) {
+                        return res.json();
+                        // to get all the data from the request, comment out the following three lines...
+                    }).then(function(data) {
+                        return data.features[0].center;
+                    });
             }
 
 

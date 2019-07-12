@@ -22,3 +22,11 @@ body {
 #bgColor {
     background-color: #d3d9df;
 }
+.mapWidth {
+    width: 80%;
+    height: 400px;
+}
+
+section {
+    align-content: center;
+}
