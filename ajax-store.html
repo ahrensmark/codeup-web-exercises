@@ -18,7 +18,7 @@
             <th>Price</th>
             <th>Categories</th>
         </tr>
-        <tbody id="products">
+        <tbody id="product24">
 
         </tbody>
     </thead>
@@ -42,11 +42,10 @@ console.log("GET request completed");
     function updatePage() {
 
         var request = $.ajax('json/inventory.json');
-
         request.done(function(inventory) {
             var html = buildHTML(inventory);
 
-            $('#products').html(html);
+            $('#product24').html(html);
         });
     }
 
