@@ -1,4 +1,24 @@
-#forecastInfo, h1, h2 {
-    text-align: center;
+/*#forecastInfo, h1, h2 {*/
+/*    text-align: center;*/
+/*}*/
+
+p {
+    font-size: 12px;
+    margin-bottom: 5px;
 }
 
+#moveRight {
+    margin-left: 20px;
+}
+
+body {
+    background-color: #7abaff;
+}
+
+#forecastInfo {
+    background-color: white;
+}
+
+#bgColor {
+    background-color: #d3d9df;
+}

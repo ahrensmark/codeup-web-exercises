@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>San Antonio Weather</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <!--Create a new HTML file called weather_map.html.-->
@@ -32,29 +34,25 @@
 
 <!--    As you complete each step, commit your changes and push them to GitHub.-->
 <body>
-    <div id="weather"></div>
-        <h1>Weather Application</h1>
+    <div></div>
+        <h1 id="moveRight">Weather Application</h1>
         <h2>For San Antonio Texas</h2>
+    <br>
     <div class="container">
-<!--        <div class="row">-->
-<!--            <div class="col-sm">-->
-<!--                One of three columns-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                One of three columns-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                One of three columns-->
-<!--            </div>-->
-<!--        </div>-->
-    </div>
-    <div id="forecastInfo">
+        <div class="row text-center" id="forecastInfo">
+<!--            <div class="col-4">yes</div>-->
+<!--            <div class="col-4">no</div>-->
 
+
+        </div>
     </div>
+
     <br>
     <button id="weather1">Click to update</button>
     <script src="js/keys.js"></script>
     <script src="js/jquery.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <script src="js/mapbox-geocoder-utils.js"></script>
     <script>
         (function() {
             "use strict";
@@ -72,30 +70,34 @@
 
         //build current weather
             updatePage();
-            function buildHTML(current) {
-                console.log(current.currently);
-                console.log(current.currently.temperature);
-                var todayHTML = "";
-                    todayHTML +=  "<div>" + "<h2>" + current.currently.temperature.toFixed(0) + "</h2>" + "</div>";
-                    todayHTML +=  "<div>" +  current.currently.summary + "</div>";
-                    todayHTML +=  "<div>" + "<b>Humidity: </b>" + current.currently.humidity * 100 + "%" + "</div>";
-                    todayHTML +=  "<div>" + "<b>Wind Speed: </b>" + current.currently.windSpeed.toFixed(0) + "</div>";
-                    todayHTML +=  "<div>" +  "<b>Pressure: </b>" +current.currently.pressure + "</div>";
-
-                return todayHTML;
-            }
+            // function buildHTML(current) {
+            //     console.log(current.currently);
+            //     console.log(current.currently.temperature);
+            //     var todayHTML = "";
+            //         todayHTML +=  "<div>" + "<h2>" + current.currently.temperature.toFixed(0) + "</h2>" + "</div>";
+            //         todayHTML +=  "<div>" +  current.currently.summary + "</div>";
+            //         todayHTML +=  "<div>" + "<b>Humidity: </b>" + current.currently.humidity * 100 + "%" + "</div>";
+            //         todayHTML +=  "<div>" + "<b>Wind Speed: </b>" + current.currently.windSpeed.toFixed(0) + "</div>";
+            //         todayHTML +=  "<div>" +  "<b>Pressure: </b>" +current.currently.pressure + "</div>";
+            //
+            //     return todayHTML;
+            // }
             $('#weather1').click(updatePage);
 
         //Build 3 day forecast
-        //     function buildHTML(forecast) {
-        //         var forecastsHTML = "";
-        //         products.forEach(function (product) {
-        //             forecastsHTML += "<tr>";
-        //             forecastsHTML += "<td><img src='" + product.url + "' alt='" + product.title + "'/>" + "</td>" + "<td>" + product.title + "</td>" + "<td>" + product.brand + "</td>" + "<td>" + product.quantity + "</td>" + "<td>" + "$" + product.price + "</td>" + "<td>" + product.categories + " " + "</td>";
-        //             forecastsHTML += "</tr>";
-        //         });
-        //         return forecastsHTML;
-        //     }
+            function buildHTML(forecast) {
+                var forecastsHTML = "";
+                for (var i = 0; i < 3; i++) {
+                    forecastsHTML += "<div class='col-4 border border-dark' id='bgColor'> <h3>" + forecast.daily.data[i].temperatureHigh.toFixed(0) + "°" + "/" + forecast.daily.data[i].temperatureLow.toFixed(0) + "°" + "</h3>";
+                    forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity + "</p>";
+                    forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity + "</p>";
+                    forecastsHTML += "<p>" + 'Wind: ' + forecast.daily.data[i].wind + "</p>";
+                    forecastsHTML += "<p>" + 'Pressure: ' + forecast.daily.data[i].pressure + "</p></div>";
+
+
+                }
+                return forecastsHTML;
+            }
 
 
     })();
