@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6803289c-6038-4483-af51-255b05bb1dec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/weather_map.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/weather_map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/weather_map.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,20 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/weather_map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="43">
+              <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/weather_map.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="330">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -105,8 +105,8 @@
         <option value="$PROJECT_DIR$/css/ajax-store.css" />
         <option value="$PROJECT_DIR$/js/keys.js" />
         <option value="$PROJECT_DIR$/ajax-store.html" />
-        <option value="$PROJECT_DIR$/weather_map.html" />
         <option value="$PROJECT_DIR$/css/weather_map.css" />
+        <option value="$PROJECT_DIR$/weather_map.html" />
       </list>
     </option>
   </component>
@@ -149,6 +149,17 @@
             <path>
               <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="weather-icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -177,18 +188,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/js/jquery" />
-      <recent name="$PROJECT_DIR$/json" />
-      <recent name="$PROJECT_DIR$/img" />
-      <recent name="$PROJECT_DIR$/js" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/json" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/weather-icons" />
+      <recent name="$PROJECT_DIR$/js/jquery" />
+      <recent name="$PROJECT_DIR$/json" />
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -306,12 +317,12 @@
       <workItem from="1562782679783" duration="9343000" />
       <workItem from="1562847648417" duration="76000" />
       <workItem from="1562847846118" duration="22763000" />
-      <workItem from="1562885759945" duration="9763000" />
+      <workItem from="1562885759945" duration="14134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="424296000" />
+    <option name="totallyTimeSpent" value="428667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -334,7 +345,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5257426" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.52465755" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.24383561" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -383,13 +394,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/for_loops.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="96" column="16" lean-forward="true" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/break_and_continue.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -605,13 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/json/inventory.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grid-layout.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -622,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax-store.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mapbox_maps_api.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -636,17 +626,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weather_map.html">
+    <entry file="file://$PROJECT_DIR$/css/weather_map.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="330">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/weather_map.css">
+    <entry file="file://$PROJECT_DIR$/img/weather-icons">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax-store.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="507">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/inventory.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather_map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
         </state>
       </provider>
     </entry>

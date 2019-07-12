@@ -56,9 +56,12 @@
     <script>
         (function() {
             "use strict";
+
             function updatePage() {
+
+
                 //get request for forecast data
-                $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/29.4241,-98.4936").done(function(data) {
+                $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/29.4241,-98.4936").done(function (data) {
                     var html = buildHTML(data);
                     console.log(data);
                     // var dateObject = new Date(data.currently.time * 1000);
@@ -68,7 +71,7 @@
                 });
             }
 
-        //build current weather
+            //build current weather
             updatePage();
             // function buildHTML(current) {
             //     console.log(current.currently);
@@ -84,19 +87,39 @@
             // }
             $('#weather1').click(updatePage);
 
-        //Build 3 day forecast
+            //Build 3 day forecast
+            var icons = [
+                {
+                    'clear-day': "img/weather-icons/wi-day-sunny.svg",
+                    'clear-night': "img/weather-icons/wi-night-clear.svg",
+                    'rain': "img/weather-icons/wi-rain.svg",
+                    'snow': "img/weather-icons/wi-snow.svg",
+                    'sleet': "img/weather-icons/wi-sleet.svg",
+                    'wind': "img/weather-icons/wi-strong-wind.svg",
+                    'fog': "img/weather-icons/wi-fog.svg",
+                    'cloudy': "img/weather-icons/wi-cloud.svg",
+                    'partly-cloudy-day': "img/weather-icons/wi-day-sunny-overcast.svg",
+                    'partly-cloudy-night': "img/weather-icons/wi-night-alt-partly-cloudy.svg",
+                }];
+            // function iconArray(input1) {
+            //     for(var j = 0; j < icons.length-1; j++) {
+            //         if(forecast.daily.data[i].icon === icons[j]);
+            //     console.log(icons)
+            //     }
+
             function buildHTML(forecast) {
                 var forecastsHTML = "";
                 for (var i = 0; i < 3; i++) {
                     forecastsHTML += "<div class='col-4 border border-dark' id='bgColor'> <h3>" + forecast.daily.data[i].temperatureHigh.toFixed(0) + "°" + "/" + forecast.daily.data[i].temperatureLow.toFixed(0) + "°" + "</h3>";
-                    forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity + "</p>";
+                    // forecastsHTML += "<p>" + input1.daily.data[i].icon + "</p>";
+                    forecastsHTML += "<p>" + 'Forecast: ' + forecast.daily.data[i].icon + "</p>";
                     forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity + "</p>";
                     forecastsHTML += "<p>" + 'Wind: ' + forecast.daily.data[i].wind + "</p>";
                     forecastsHTML += "<p>" + 'Pressure: ' + forecast.daily.data[i].pressure + "</p></div>";
-
-
                 }
-                return forecastsHTML;
+
+
+            return forecastsHTML;
             }
 
 
