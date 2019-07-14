@@ -23,10 +23,20 @@ body {
     background-color: #d3d9df;
 }
 .mapWidth {
-    width: 80%;
+    width: 100%;
     height: 400px;
 }
 
 section {
     align-content: center;
+}
+
+.padding {
+    margin: 0 30px;
+    background-color: #7abaff;
+}
+
+.iconSmall {
+    height: 27px;
+    width: auto;
 }
