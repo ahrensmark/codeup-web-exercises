@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>San Antonio Weather</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' type='text/css' />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/weather_map.css">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
+
+</head>
+
+<body>
+<!--HTML section-->
+<div></div>
+<h1 id="moveRight">Weather Application</h1>
+<h2>For San Antonio Texas</h2>
+<br>
+<div class="container-fluid">
+    <div class="row text-center padding"  id="forecastInfo">
+    </div>
+</div>
+
+<br>
+<!--Mapbox map HTML    -->
+<!--pull lat & Long input and pull to mapbox-->
+<form method="get">
+    <label for="latitude">Enter Latitude</label>
+    <input type="number" id="latitude" name="latitude">
+    <br>
+    <label for="longitude">Enter longitude</label>
+    <input type="number" id="longitude" name="longitude">
+    <input type="submit">
+</form>
+<!--add click functionality    -->
+<br>
+<!-- The HTML element that serves as the Mapbox container -->
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10"><section id='map' class="mapWidth"></section></div>
+    <div class="col-1"></div>
+</div>
+<!--    <section id='map' class="mapWidth"></section>-->
+<button id="weather1">Click to update</button>
+<pre id='coordinates' class='coordinates'></pre>
+<!-- ========================================================================================== -->
+<!--JavaScript Section-->
+<script src="js/keys.js"></script>
+<script src="js/jquery.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<script>
+    //IFFE
+    (function() {
+        "use strict";
+        // Initialize starting coordinates
+        // runLatLong(-98.4916, 29.4252);
+
+
+        function updatePage() {
+            //get request for forecast data
+            $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/29.4241,-98.4936").done(function (data) {
+                var html = buildHTML(data,icons);
+                console.log(data);
+                //Set the built forecast(html variable) info to the HTML div
+                $('#forecastInfo').html(html);
+            });
+        }
+        updatePage();
+        $('#weather1').click(updatePage);
+//build current weather - Exercise part 1: #2 show current SA weather.
+
+        // function buildHTML(current) {
+        //     console.log(current.currently);
+        //     console.log(current.currently.temperature);
+        //     var todayHTML = "";
+        //         todayHTML +=  "<div>" + "<h2>" + current.currently.temperature.toFixed(0) + "</h2>" + "</div>";
+        //         todayHTML +=  "<div>" +  current.currently.summary + "</div>";
+        //         todayHTML +=  "<div>" + "<b>Humidity: </b>" + current.currently.humidity * 100 + "%" + "</div>";
+        //         todayHTML +=  "<div>" + "<b>Wind Speed: </b>" + current.currently.windSpeed.toFixed(0) + "</div>";
+        //         todayHTML +=  "<div>" +  "<b>Pressure: </b>" +current.currently.pressure + "</div>";
+        //
+        //     return todayHTML;
+        // }
+
+
+//Build 3 day forecast
+        // Weather icons object array
+        var icons = [
+            { forecasted: "clear-day",
+                url:  "img/weather-icons/svg/wi-day-sunny.svg"},
+            { forecasted: "clear-night",
+                url:  "img/weather-icons/svg/wi-night-clear.svg"},
+            { forecasted: "rain",
+                url:  "img/weather-icons/svg/wi-rain.svg"},
+            {  forecasted: "snow",
+                url:  "img/weather-icons/svg/wi-snow.svg"},
+            { forecasted: "sleet",
+                url:  "img/weather-icons/svg/wi-sleet.svg"},
+            { forecasted: "wind",
+                url:  "img/weather-icons/svg/wi-strong-wind.svg"},
+            { forecasted: "fog",
+                url:  "img/weather-icons/svg/wi-fog.svg"},
+            { forecasted: "cloudy",
+                url:  "img/weather-icons/svg/wi-cloud.svg"},
+            { forecasted: "partly-cloudy-day",
+                url:  "img/weather-icons/svg/wi-day-sunny-overcast.svg"},
+            { forecasted: "partly-cloudy-night",
+                url:  "img/weather-icons/svg/wi-night-alt-partly-cloudy.svg"}
+        ];
+        //iterate through icons array and add to matched api data(animate if possible).
+        function iconArray(forecast) {
+            for (var j = 0; j < icons.length; j++) {
+                if (forecast === icons[j].forecasted) {
+                    return icons[j].url;
+                }
+            }
+        }
+        function buildHTML(forecast) {
+            var forecastsHTML = "";
+            for (var i = 0; i < 3; i++) {
+                forecastsHTML += "<div class='col-4 border border-dark' id='bgColor'> <h3>" + forecast.daily.data[i].temperatureHigh.toFixed(0) + "°" + "/" + forecast.daily.data[i].temperatureLow.toFixed(0) + "°" + "</h3>";
+                iconArray(forecast.daily.data[i]);
+                forecastsHTML += "<p><img class='iconSmall' src='" + iconArray(forecast.daily.data[i].icon) + "' alt='" +  "'/></p>";
+                forecastsHTML += "<p>" + 'Forecast: ' + forecast.daily.data[i].icon + "</p>";
+                forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity + "</p>";
+                forecastsHTML += "<p>" + 'Wind: ' + forecast.daily.data[i].wind + "</p>";
+                forecastsHTML += "<p>" + 'Pressure: ' + forecast.daily.data[i].pressure + "</p></div>";
+            }
+            return forecastsHTML;
+        }
+        mapboxgl.accessToken = mapboxToken;
+        var coordinates = document.getElementById('coordinates');
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [0, 0],
+            zoom: 2
+        });
+
+        var canvas = map.getCanvasContainer();
+
+        // geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxToken).then(function(result) {
+        //     console.log(result);
+        //     map.setCenter(result);
+        //     map.setZoom(10);
+        // });
+        var geojson = {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [0, 0]
+                }
+            }]
+        };
+
+        function onMove(e) {
+            var coords = e.lngLat;
+
+// Set a UI indicator for dragging.
+            canvas.style.cursor = 'grabbing';
+
+// Update the Point feature in `geojson` coordinates
+// and call setData to the source layer `point` on it.
+            geojson.features[0].geometry.coordinates = [coords.lng, coords.lat];
+            map.getSource('point').setData(geojson);
+        }
+
+        function onUp(e) {
+            var coords = e.lngLat;
+
+// Print the coordinates of where the point had
+// finished being dragged to on the map.
+            coordinates.style.display = 'block';
+            coordinates.innerHTML = 'Longitude: ' + coords.lng + '<br />Latitude: ' + coords.lat;
+            canvas.style.cursor = '';
+
+// Unbind mouse/touch events
+            map.off('mousemove', onMove);
+            map.off('touchmove', onMove);
+        }
+
+        map.on('load', function() {
+
+// Add a single point to the map
+            map.addSource('point', {
+                "type": "geojson",
+                "data": geojson
+            });
+
+            map.addLayer({
+                "id": "point",
+                "type": "circle",
+                "source": "point",
+                "paint": {
+                    "circle-radius": 10,
+                    "circle-color": "#3887be"
+                }
+            });
+
+// When the cursor enters a feature in the point layer, prepare for dragging.
+            map.on('mouseenter', 'point', function() {
+                map.setPaintProperty('point', 'circle-color', '#3bb2d0');
+                canvas.style.cursor = 'move';
+            });
+
+            map.on('mouseleave', 'point', function() {
+                map.setPaintProperty('point', 'circle-color', '#3887be');
+                canvas.style.cursor = '';
+            });
+
+            map.on('mousedown', 'point', function(e) {
+// Prevent the default map drag behavior.
+                e.preventDefault();
+
+                canvas.style.cursor = 'grab';
+
+                map.on('mousemove', onMove);
+                map.once('mouseup', onUp);
+            });
+
+            map.on('touchstart', 'point', function(e) {
+                if (e.points.length !== 1) return;
+
+// Prevent the default map drag behavior.
+                e.preventDefault();
+
+                map.on('touchmove', onMove);
+                map.once('touchend', onUp);
+            });
+        });
+    })();
+</script>
+</body>
+</html>

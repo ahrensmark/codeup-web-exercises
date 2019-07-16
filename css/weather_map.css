@@ -8,7 +8,7 @@ p {
 }
 
 #moveRight {
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 .mapWidth {
     width: 100%;
-    height: 400px;
+    height: 350px;
 }
 
 section {
@@ -37,6 +37,13 @@ section {
 }
 
 .iconSmall {
-    height: 27px;
+    height: 50px;
     width: auto;
+}
+#geoLocation {
+    margin-left: 20px;
+}
+
+h3 {
+    margin-left: 5px;
 }

@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>San Antonio Weather</title>
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' type='text/css' />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/weather_map.css">
+
 </head>
 
 <body>
 <!--HTML section-->
     <div></div>
-        <h1 id="moveRight">Weather Application</h1>
-        <h2>For San Antonio Texas</h2>
+        <h1 id="moveRight">Weather For:</h1>
+        <h3 id="weatherLoc"></h3>
     <br>
     <div class="container-fluid">
         <div class="row text-center padding"  id="forecastInfo">
@@ -25,14 +26,20 @@
     <br>
 <!--Mapbox map HTML    -->
     <!--pull lat & Long input and pull to mapbox-->
-    <form method="get">
-        <label for="latitude">Enter Latitude</label>
-        <input type="number" id="latitude" name="latitude">
-        <br>
-        <label for="longitude">Enter longitude</label>
-        <input type="number" id="longitude" name="longitude">
-        <input type="submit">
-    </form>
+<!--    <form method="get">-->
+<!--        <label for="latitude">Enter Latitude</label>-->
+<!--        <input type="number" id="latitude" name="latitude">-->
+<!--        <br>-->
+<!--        <label for="longitude">Enter longitude</label>-->
+<!--        <input type="number" id="longitude" name="longitude">-->
+<!--        <input type="submit">-->
+<!--    </form>-->
+<!--add search box for geocode-->
+<form id="location" action="">
+    <label for="geoLocation"></label>
+    <input id="geoLocation" name="geoLocation" type="text" placeholder="Search location">
+    <input type="submit">
+</form>
     <!--add click functionality    -->
     <br>
     <!-- The HTML element that serves as the Mapbox container -->
@@ -42,10 +49,11 @@
         <div class="col-1"></div>
     </div>
     <!--    <section id='map' class="mapWidth"></section>-->
-    <button id="weather1">Click to update</button>
-
+    <button id="weather1"></button>
+<!--    <pre id='coordinates' class='coordinates'></pre>-->
 <!-- ========================================================================================== -->
 <!--JavaScript Section-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
     <script src="js/keys.js"></script>
     <script src="js/jquery.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
@@ -56,19 +64,22 @@
         (function() {
             "use strict";
     // Initialize starting coordinates
-            runLatLong(-98.4916, 29.4252);
 
-
-            function updatePage() {
+        var latitude = -98.4916;
+        var longitude = 29.4252;
+           // runLatLong(latitude, longitude);
+            function updatePage(lng,lat) {
     //get request for forecast data
-                $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/29.4241,-98.4936").done(function (data) {
-                    var html = buildHTML(data,icons);
+                console.log(lng + ' ' + lat);
+                $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + lng.toString() + "," + lat.toString()).done(function (data) {
+                    var html = buildHTML(data);
                     console.log(data);
     //Set the built forecast(html variable) info to the HTML div
                     $('#forecastInfo').html(html);
                 });
+
             }
-            updatePage();
+            updatePage(longitude,latitude);
             $('#weather1').click(updatePage);
 //build current weather - Exercise part 1: #2 show current SA weather.
 
@@ -122,7 +133,6 @@
                 var forecastsHTML = "";
                 for (var i = 0; i < 3; i++) {
                     forecastsHTML += "<div class='col-4 border border-dark' id='bgColor'> <h3>" + forecast.daily.data[i].temperatureHigh.toFixed(0) + "°" + "/" + forecast.daily.data[i].temperatureLow.toFixed(0) + "°" + "</h3>";
-                    iconArray(forecast.daily.data[i]);
                     forecastsHTML += "<p><img class='iconSmall' src='" + iconArray(forecast.daily.data[i].icon) + "' alt='" +  "'/></p>";
                     forecastsHTML += "<p>" + 'Forecast: ' + forecast.daily.data[i].icon + "</p>";
                     forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity + "</p>";
@@ -133,12 +143,12 @@
             }
 
 // bind HTML form to function to capture the value of inputs
-            $('form').submit(function(e) {
-                e.preventDefault();
-                var lat = $("#latitude").val();
-                var long = $("#longitude").val();
-                runLatLong(lat, long);
-            });
+//             $('form').submit(function(e) {
+//                 e.preventDefault();
+//                 var lat = $("#latitude").val();
+//                 var long = $("#longitude").val();
+//                 runLatLong(lat, long);
+//             });
 //function to set entered coordinates
 //             mapboxgl.accessToken = '<your access token here>';
 //             var coordinates = document.getElementById('coordinates');
@@ -148,43 +158,156 @@
 //                 center: [0, 0],
 //                 zoom: 2
 //             });
-            function runLatLong(latitude, longitude) {
-                mapboxgl.accessToken = mapboxToken;
-                var coordinates = document.getElementById('coordinates');
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/streets-v11',
-                    center: [latitude, longitude],
-                    zoom: 4
-                });
-//initialize marker and make draggable
-                var marker = new mapboxgl.Marker({
-                    draggable: true
-                })
-                    .setLngLat([latitude, longitude])
-                    .addTo(map);
-//
-                function onDragEnd() {
-                    var lngLat = marker.getLngLat();
-                    coordinates.style.display = 'block';
-                    coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-                    alert(lnglat);
-                }
-                marker.on('dragend', onDragEnd);
 
-// //geocode function
-//                 function geocode(search, token) {
-//                     var baseUrl = 'https://api.mapbox.com';
-//                     var endPoint = '/geocoding/v5/mapbox.places/';
-//                     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-//                         .then(function (res) {
-//                             return res.json();
-//             // to get all the data from the request, comment out the following three lines...
-//                         }).then(function (data) {
-//                             return data.features[0].center;
-//                         });
-//                 }
+             //function runLatLong(latitude, longitude) {
+                 mapboxgl.accessToken = mapboxToken;
+                 var coordinates = document.getElementById('coordinates');
+
+                 var map = new mapboxgl.Map({
+
+                     container: 'map',
+                     style: 'mapbox://styles/mapbox/streets-v11',
+                     center: [latitude, longitude],
+                     zoom: 7
+                 });
+            //console.log(map);
+            $('form').submit(function(e) {
+                e.preventDefault();
+                var geoC = $("#geoLocation").val();
+
+                console.log(geoC);
+                alert(geoC);
+                geocode(geoC, mapboxToken).then(function (result) {
+                    //console.log(result.place_name);
+                    map.setCenter(result);
+                    map.setZoom(7);
+                    updatePage(result[1], result[0]);
+                    return [result[1], result[0]];
+                });
+                console.log(longitude + latitude);
+
+                reverseGeocode({lng:-98.4916, lat:29.4252}, mapboxToken).then(function(results) {
+                    // logs the address for The Alamo
+                    //console.log(results);
+                });
+            });
+
+                 var canvas = map.getCanvasContainer();
+
+                 // geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxToken).then(function(result) {
+                 //     console.log(result);
+                 //     map.setCenter(result);
+                 //     map.setZoom(10);
+                 // });
+                 var geojson = {
+                     "type": "FeatureCollection",
+                     "features": [{
+                         "type": "Feature",
+                         "geometry": {
+                             "type": "Point",
+                             "coordinates": [latitude, longitude]
+                         }
+
+                     }]
+                 };
+
+            function onMove(e) {
+                var coords = e.lngLat;
+
+// Set a UI indicator for dragging.
+                canvas.style.cursor = 'grabbing';
+
+// Update the Point feature in `geojson` coordinates
+// and call setData to the source layer `point` on it.
+                geojson.features[0].geometry.coordinates = [coords.lng, coords.lat];
+                map.getSource('point').setData(geojson);
             }
+
+            function onUp(e) {
+                var coords = e.lngLat;
+
+// Print the coordinates of where the point had
+// finished being dragged to on the map.
+//                 coordinates.style.display = 'block';
+//                 coordinates.innerHTML = 'Longitude: ' + coords.lng + '<br />Latitude: ' + coords.lat;
+                canvas.style.cursor = '';
+            updatePage(coords.lat, coords.lng);
+// Unbind mouse/touch events
+                map.off('mousemove', onMove);
+                map.off('touchmove', onMove);
+            }
+
+            map.on('load', function() {
+
+// Add a single point to the map
+                map.addSource('point', {
+                    "type": "geojson",
+                    "data": geojson
+                });
+
+                map.addLayer({
+                    "id": "point",
+                    "type": "circle",
+                    "source": "point",
+                    "paint": {
+                        "circle-radius": 10,
+                        "circle-color": "#3887be"
+                    }
+                });
+
+// When the cursor enters a feature in the point layer, prepare for dragging.
+                map.on('mouseenter', 'point', function() {
+                    map.setPaintProperty('point', 'circle-color', '#3bb2d0');
+                    canvas.style.cursor = 'move';
+                });
+
+                map.on('mouseleave', 'point', function() {
+                    map.setPaintProperty('point', 'circle-color', '#3887be');
+                    canvas.style.cursor = '';
+                });
+
+                map.on('mousedown', 'point', function(e) {
+// Prevent the default map drag behavior.
+                    e.preventDefault();
+
+                    canvas.style.cursor = 'grab';
+
+                    map.on('mousemove', onMove);
+                    map.once('mouseup', onUp);
+                });
+
+                map.on('touchstart', 'point', function(e) {
+                    if (e.points.length !== 1) return;
+
+// Prevent the default map drag behavior.
+                    e.preventDefault();
+
+                    map.on('touchmove', onMove);
+                    map.once('touchend', onUp);
+                });
+            });
+
+
+                // geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxToken).then(function(result) {
+                //     console.log(result);
+                //     map.setCenter(result);
+                //     map.setZoom(10);
+                // });
+//initialize marker and make draggable
+//                 var marker = new mapboxgl.Marker({
+//                     draggable: true
+//                 })
+//                     .setLngLat([latitude, longitude])
+//                     .addTo(map);
+// //
+//                 function onDragEnd() {
+//                     var lngLat = marker.getLngLat();
+//                     coordinates.style.display = 'block';
+//                     coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+//                     alert(lnglat);
+//                 }
+
+            //}
 
     })();
     </script>
