@@ -135,9 +135,9 @@
                     forecastsHTML += "<div class='col-4 border border-dark' id='bgColor'> <h3>" + forecast.daily.data[i].temperatureHigh.toFixed(0) + "°" + "/" + forecast.daily.data[i].temperatureLow.toFixed(0) + "°" + "</h3>";
                     forecastsHTML += "<p><img class='iconSmall' src='" + iconArray(forecast.daily.data[i].icon) + "' alt='" +  "'/></p>";
                     forecastsHTML += "<p>" + 'Forecast: ' + forecast.daily.data[i].icon + "</p>";
-                    forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity + "</p>";
-                    forecastsHTML += "<p>" + 'Wind: ' + forecast.daily.data[i].wind + "</p>";
-                    forecastsHTML += "<p>" + 'Pressure: ' + forecast.daily.data[i].pressure + "</p></div>";
+                    forecastsHTML += "<p>" + 'Humidity: ' + forecast.daily.data[i].humidity * 100 + "%" + "</p>";
+                    forecastsHTML += "<p>" + 'Wind: ' + forecast.daily.data[i].windSpeed.toFixed(0) + " MPH" + "</p>";
+                    forecastsHTML += "<p>" + 'Pressure: ' + forecast.daily.data[i].pressure.toFixed(0) + "</p></div>";
                 }
             return forecastsHTML;
             }
